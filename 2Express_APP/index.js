@@ -1,10 +1,8 @@
 const http = require('http')
 const app = require('./app.js')
+const { DB_PORT } = require('./props')
 const server = http.createServer(app)
 
-const cfg = {
-  port: process.env.PORT || 3000
-}
-server.listen(cfg.port, () => {
-  console.log(`server is listening on ${cfg.port} ....`)
+server.listen(DB_PORT, () => {
+  console.log(`server is listening on ${DB_PORT} ....`)
 })
