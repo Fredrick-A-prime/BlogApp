@@ -1,10 +1,10 @@
 const express = require('express')
 const path = require('path')
-const router = express()
+// const router = express()
 
-router.get('/about', (req, res) => {
+module.exports = (req, res) => {
   // res.sendFile(path.resolve(__dirname, 'pages/index.html'))
   res.render('about')
-})
+}
 
-module.exports = router
+// module.exports = router
